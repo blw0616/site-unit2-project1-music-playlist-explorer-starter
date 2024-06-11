@@ -1,6 +1,109 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
+    height: 100%;
     padding: 0;
-    background-color: #f8f8f8;
 }
+main{
+    background-color: red;
+}
+#header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: rgb(35, 41, 34);
+    border: 2px solid rgb(208, 245, 212); /* Add border style and color */
+    color: rgb(208, 245, 212);
+}
+
+#footer {
+    position: relative;
+    background-color: rgb(35, 41, 34);
+    border: 2px solid rgb(208, 245, 212); /* Add border style and color */
+    color: rgb(208, 245, 212);
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.playlist-cards {
+    color: black;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 50%;
+    margin: 80px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; /* Keep only the relevant property */
+    background-color: transparent;
+    padding: 10px;
+    margin: auto;
+}
+
+.cardContent {
+    padding: 20px;
+    height: 100%;
+}
+#cardImg {
+    max-width: 75px;
+    height: auto; /* Adjusted from fit-content */
+}
+.likes{
+    display: flex;
+    justify-content: column;
+}
+#heart {
+   max-height: 20px; 
+}
+
+/* CSS for Modal */
+.modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ .modal-content {
+    background-color: rgb(208, 245, 212);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+ }
+ .modalPInfo{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+ }
+ .overlayTop{
+    display: flex;
+    flex-direction: row;
+ }
+ .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+ }
+ .close:hover,
+ .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+ }
+
+
