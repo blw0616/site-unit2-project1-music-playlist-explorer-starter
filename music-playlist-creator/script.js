@@ -1,36 +1,82 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-// JavaScript for Opening and Closing the Modal
+    // JavaScript for Opening and Closing the Modal
     let playlistGrid = document.getElementById("playlist-grid");
     var modal = document.getElementById("modal-overlay");
     var span = document.getElementsByClassName("close")[0];
-    
-    for(let playlists in data){
-        const card = document.createElement('div')
-        card.classList.add('cardContent')
-        card.innerHTML= 
-        `
-            <section class=" cardContent">
-                <img id="cardImg" src=${playlists.cover_art}  alt="${playlists.playlist_name}">
-                <h4>${playlists.playlist_name}</h4>
-                <h6>${playlists.playlist_creator}</h6>
-                <section class="likes"> Likes: <span class="likeCount"></section>
+
+    // Assuming 'data' is an array of playlist objects
+    for (let playlist of data.playlists) {
+        const card = document.createElement('div');
+        card.classList.add('cardContent');
+        card.innerHTML = `
+            <section class ="insideCard">
+                <img id="cardImg" src="${playlist.playlist_art}" alt="${playlist.playlist_name}">
+                
+                <section class ="insideCard1">
+                    <h4>${playlist.playlist_name}</h4>
+                    <h4>By: ${playlist.playlist_creator}</h4>
+                    <section class="likes"><i class="em em-black_heart" aria-role="presentation" aria-label="BLACK HEART"></i> <span id="likeCount"><p>0</p></span></section>
+                </section>
             </section>  
-        `
+        `;
+
+        playlistGrid.appendChild(card);
+        
+        card.addEventListener('click', (event) => {
+            if (!event.target.closest('.likes')) {
+                openModal(playlist);
+            }
+        });
+
+        
+        const emoji = card.querySelector('.likes i');
+        const count = card.querySelector('#likeCount');
+        emoji.addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (emoji.classList.contains('em-black_heart')) {
+                emoji.classList.remove('em-black_heart');
+                emoji.classList.add('em-heartpulse');
+                count.textContent = parseInt(count.textContent) + 1;
+            } else {
+                emoji.classList.remove('em-heartpulse');
+                emoji.classList.add('em-black_heart');
+                count.textContent = parseInt(count.textContent) - 1;
+            }
+                
+        });
     }
 
-
-
-
-
+    span.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
 
     function openModal(playlist) {
-    document.getElementById('playlistName').innerText = playlist.playlist_name;
-    document.getElementById('playlistImage').src = playlist.playlist_art;
-    document.getElementById('creatorName').innerText = playlist.playlist_creator;
-    document.getElementById('songs').innerHTML = `<strong>Lineup:</strong> ${festival.lineup.join(', ')}`;
-    modal.style.display = "flex";
+        // change the way this is done. do ".add" instead
+        document.getElementById('modal-content').style.display = "block";
+        document.getElementById('playlistName').innerText = playlist.playlist_name;
+        document.getElementById('playlistImage').src = playlist.playlist_art;
+        document.getElementById('creatorName').innerText = playlist.playlist_creator;
+        document.getElementById('songs').innerHTML = playlist.songs.map(song => `
+            <div class="SDContainer">
+                <div class="songDisplay">
+                    <section class="songInfo">
+                        <img class="songPic" src="${song.cover_art}" alt="${song.name}">
+                        <div class="songWords">
+                            <h4>${song.title}</h4>
+                            <p>${song.artist}</p>
+                            <p>${song.album}</p>
+                        </div>
+                    </section>
+                    <section class="songTime">${song.duration}</section>
+                </div>
+            </div>
+        `).join('');
+        modal.style.display = "block";
     }
 
-})
-
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});

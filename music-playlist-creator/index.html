@@ -3,47 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
     <link rel="stylesheet" href="style.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    
 </head>
 <body>
     <header id="header">
-        <h1>Music Playlist Explorer</h1>
-    </header>
+        <h1 id="headerHead" style="padding: 10px;">Music Playlist Explorer</h1>
+    </header> 
     <main> 
-        <div class="playlist-grid">
-            </div> 
-    </main>
-    <section class="modal-overlay">
-        <div id="modal-overlay" class="modal">
-           <!-- <div class="modal-content">
+        <section class="modal" id="modal-overlay">
+            <div id="modal-content" class="modal-content" style="display: none;">
                 <span class="close">&times;</span>
                 <div class="overlayTop">
-                <img id="playlistImage" src="" alt="Playlist Cover Art">
-                <section class="modalPInfo">
-                    <h1 id="playlistName">Name</h1>
-                    <h4 id="creatorName">Creator</h4>
-                </section>
-               </div>
-               <div id="songs">
-                    <img id="coverArt" src="" alt="">
-                    <section>
-                        <h6 id="songName"></h6>
-                        <p id="artistName"></p>
-                        <p id="albumName"></p>
+                    <img id="playlistImage" src="" alt="Playlist Cover Art">
+                    <section class="modalPInfo">
+                        <h1 id="playlistName"></h1>
+                        <h4 id="creatorName"></h4>
                     </section>
-                    <section id="time"></section>
-               </div>
+                </div>
+                <div id="songs"></div>
             </div>
-         </div>  -->
-    </section> 
-
-    <footer id="footeejeicbrbrgudlhuduvikcvhbrlrvfgfkihcclfvkungk
-    r">
-        <p>footer</p>
+        </section>
+        <div style="background-color: rgb(35, 41, 34);" class="deco">
+            <div id="playlist-grid" class="playlist-grid"></div> 
+                <div class="deco"></div>
+        </div>
+    </main>
+    <footer id="footer">
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
