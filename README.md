@@ -51,11 +51,11 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 ### Walkthrough Video
 
 `<div>
-    <a href="https://www.loom.com/share/2973ff68dfa9484d963a483a422bbdc6">
-      <p>Private Video - Watch Video</p>
+    <a href="https://www.loom.com/share/0d18d67f64cf4642a27dc5be4adb4b8e">
+      <p>Music Playlist Explorer - 13 June 2024 - Watch Video</p>
     </a>
-    <a href="https://www.loom.com/share/2973ff68dfa9484d963a483a422bbdc6">
-      <img style="max-width:300px;" src="https://cdn.loom.com/placeholders/private-video.gif">
+    <a href="https://www.loom.com/share/0d18d67f64cf4642a27dc5be4adb4b8e">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0d18d67f64cf4642a27dc5be4adb4b8e-with-play.gif">
     </a>
   </div>`
 
