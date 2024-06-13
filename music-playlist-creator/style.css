@@ -23,21 +23,32 @@ body {
 main {
     background-color: rgb(35, 41, 34);
 }
-#header {
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: 99%;
     position: relative;
     margin: 0 auto;
-    top: 0;
+    align-items: center;
     background-color: rgb(35, 41, 34);
     border: 2px solid rgb(208, 245, 212);
+    border-radius: 15px;
     color: rgb(208, 245, 212);
     margin-bottom: 10px;
 }
-
+#featuredB{
+    height: 50%;
+    align-items: center;
+    top: 50%;
+    background-color: rgba(33, 97, 22, 0.562);
+    color: rgb(208, 245, 212);
+    
+}
 #footer {
     position: relative;
-    background-color: rgb(35, 41, 34);
-    border: 2px solid rgb(35, 41, 34);
+    background-color: rgb(208, 245, 212);
+    border: 10px solid rgb(35, 41, 34);
     color: rgb(208, 245, 212);
     bottom: 0;
     width: 100%;
@@ -49,17 +60,27 @@ main {
     border-radius: 20px;
     background-color: rgb(208, 245, 212);
     display: grid;
+    row-gap: 5rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     padding: 10px;
     margin: 0 auto;
+    margin-top: 30px;
     width: 75%;
     height: 50%;
     justify-content: space-between;
     align-items: center;
     z-index: -1;
 }
-
+.songPic{
+    border-radius: 10%;
+}
+.songWords{
+    padding: 10px;
+}
+#playlistImage{
+    border-radius: 10%;
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -72,6 +93,7 @@ main {
 .cardContent {
     padding: 7.5px;
     margin: 10px auto;
+    box-shadow:  25px 25px rgba(#78586F);
     background-color: rgb(35, 41, 34);
     border-radius: 10px;
 }
@@ -96,25 +118,41 @@ main {
     font-size: small;
     padding: 10px;
     display: flex;
-    justify-content: column;
+    align-items: center;
 }
-
+.likes span {
+    display: inline-block;
+    width: 20px; /* Ensure fixed width for count */
+    text-align: center;
+}
 #heart {
     max-height: 20px;
 }
 
 p {
+    font-family: Spotty1;
     margin: 0;
     padding: 5px;
 }
 
 h4{
+    font-family: Spotty;
     margin: 0;
     padding: 5px;
 }
 
 #creatorName {
     padding: 0;
+}
+.featured{
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 80%; /* Full width */
+    height: 90%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    overflow: auto; /* Enable scroll if needed */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 /* Updated modal and modal content CSS */
@@ -157,7 +195,15 @@ h4{
     flex-direction: row;
     padding: 20px;
 }
+#shuffleButton{
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 2px solid rgb(35, 41, 34);
+    border-radius: 10%;
+    background-color: rgba(33, 97, 22, 0.562);
 
+}
 .close {
     color: #aaa;
     float: right;
@@ -204,4 +250,15 @@ h4{
 .songPic {
     max-width: 115px;
     max-height: 115px;
+}
+@media screen and (max-width: 655px ) {
+    .playlist-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (min-width: 656px) and (max-width: 1000px) {
+    .playlist-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
 }

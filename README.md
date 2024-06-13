@@ -1,5 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Unit Assignment: Music Playlist Explorer
 
 Submitted by: **Bailey Williams**
@@ -12,22 +10,22 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 #### CORE FEATURES
 
-- [ ] **Display Playlists**
+- [x] **Display Playlists**
   - [x] Dynamically render playlists on the homepage using JavaScript.
   - [x] Fetch data from a provided JSON file and use it to create interactive playlist tiles.
-  - [] Each title should display the playlist's cover image, name, creator, and like count.
+  - [x] Each title should display the playlist's cover image, name, creator, and like count.
 
-- [ ] **Playlist Details**
+- [x] **Playlist Details**
   - [x] Create a modal view that displays detailed information about a playlist when a user clicks on a playlist tile.
   - [x] The modal should show the playlist's cover image, name, creator, and a list of songs, including their titles, artists, and durations.
 
-- [ ] **Like Playlists**
-  - [ ] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
-  - [ ] Update the like count on the playlist tile when a playlist is liked or unliked.
+- [x] **Like Playlists**
+  - [x] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
+  - [x] Update the like count on the playlist tile when a playlist is liked or unliked.
 
-- [ ] **Shuffle Songs**
-  - [ ] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist detail modal.
-  - [ ] Rearrange the songs in the modal view when the shuffle button is clicked.
+- [x] **Shuffle Songs**
+  - [x] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist detail modal.
+  - [x] Rearrange the songs in the modal view when the shuffle button is clicked.
 
 #### STRETCH FEATURES
 
@@ -52,28 +50,34 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+`<div>
+    <a href="https://www.loom.com/share/2973ff68dfa9484d963a483a422bbdc6">
+      <p>Private Video - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/2973ff68dfa9484d963a483a422bbdc6">
+      <img style="max-width:300px;" src="https://cdn.loom.com/placeholders/private-video.gif">
+    </a>
+  </div>`
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Yes, the lab prepared me to make basic js functions, but it did not prepare me to pull items from a JSON file, and I would give my preparation a 6.5/10. Next time, the labs should at least reflect the asignment in some way.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+I would have mae my site more interactive (stretch features), and I would found a way to embed youtube mp4 files in the site to add music.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+My project demo went great! I ws able to go through the features of the site, and I highlighted a lot of good things. Next time, I would like to try the stretch features and incorporate more CSS to improve how the final product looks.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- chatgpt.com
+- w3schools.com
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Shout out KENNETH AND KIANHA FOR ALL THE HELPPPPP!!!

@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         
         const emoji = card.querySelector('.likes i');
+        emoji.style.cursor= 'pointer';
         const count = card.querySelector('#likeCount');
         emoji.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -43,6 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 count.textContent = parseInt(count.textContent) - 1;
             }
                 
+        });
+        const songs1 = document.getElementById('songs');
+        shuffleButton.addEventListener('click', (event) => {
+            const songey = Array.from(songs.children);
+            songey.sort(() => Math.random() - 0.5);
+            songs1.innerHTML = "";
+            songey.forEach((songey) => songs1.appendChild(songey));
         });
     }
 
@@ -78,5 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target === modal) {
             modal.style.display = "none";
         }
+    });
+    document.getElementById('featuredB').addEventListener('click', () => {
+        window.location.href = 'featured.html'; 
     });
 });
